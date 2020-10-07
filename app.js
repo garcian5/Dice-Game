@@ -143,7 +143,7 @@ function init(){
 
 function winningScore(){
     var num = document.getElementById("number").value;
-    if (num <= 0) {
+    if (num <== 0) {
         document.getElementById("number").value = 10;
         num = 10
     }
