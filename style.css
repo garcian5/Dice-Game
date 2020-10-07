@@ -47,6 +47,47 @@ body {
 }
 
 
+/**********************************************
+*** MAIN NAVIGATION
+**********************************************/
+.main-nav {
+    float: right;
+    list-style: none; /*to get rid of the bullet points*/
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.main-nav li { /*select all the li elements in main-nav*/
+    display: inline-block; /*they were block elements and we want them to be inline block so that we can put them side by side*/
+    margin-left: 40px; /*each of the blocks will have a margin on the left side of 40px*/
+}
+
+.main-nav li a:link,
+.main-nav li a:visited { /*somehow, if I add space between a: and visited, it will show an unexpected result*/
+    padding: 8px 0;
+    color: #a06464;
+    text-decoration: none; /*get rid of the line*/
+    text-transform: uppercase;
+    font-size: 100%; /*90% of the base pixels (w/c is 20)*/
+    border-bottom: 1px solid transparent; /*the border needs to exist before we actually hover it for this to happen but since we don't want to see it we set it to transparent*/
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 1px solid #C85454;
+    color: #C85454;
+}
+
+
+/**********************************************
+*** ROW
+**********************************************/
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
 
 /**********************************************
 *** PLAYERS
@@ -155,7 +196,7 @@ input, p{
     font-weight: 300;
 }
 
-.btn-input{ 
+.btn-input { 
     top: 3px;
     left: 270px;
     width: 55px;
