@@ -143,6 +143,10 @@ function init(){
 
 function winningScore(){
     var num = document.getElementById("number").value;
+    if (num <= 0) {
+        document.getElementById("number").value = 10;
+        num = 10
+    }
     document.getElementById("enter").innerHTML = "Entered!";
     
     // if num is defined/has a value return the inputted num else, return 100
