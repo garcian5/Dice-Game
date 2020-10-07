@@ -142,8 +142,9 @@ function init(){
 }
 
 function winningScore(){
-    document.getElementById("enter").innerHTML = "Entered!";
     var num = document.getElementById("number").value;
+    document.getElementById("enter").innerHTML = "Entered!";
+    
     // if num is defined/has a value return the inputted num else, return 100
     if(num){
         return num;
