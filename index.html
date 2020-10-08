@@ -25,12 +25,49 @@
             <nav>
                 <div class="row">
                     <ul class="main-nav">
-                        <li><a href="#">Game Rules</a></li>
+                        <li><a href="#" id="g-rules">Game Rules</a></li>
                     </ul>                    
                 </div>
             </nav>            
         </header>
 
+        <!--Modal Box View of Game Rules-->
+        <div class="game-rules" id="game-modal">
+            <div class="rules-body">
+                <div class="rules-header">
+                    <span class="close">&times;</span>
+                    <p>The Dice Game Rules</p>
+                </div>
+                <div class="rules-list">
+                    <ol>
+                        <li>
+                            The game has 2 players, playing in rounds
+                        </li>
+                        <li>
+                            In each turn, a player rolls a dice as many times as they whish. Each result get added to their ROUND score
+                        </li>                        
+                        <li>
+                            BUT, if the player rolls a 1, all their ROUND score gets lost. After that, it's the next player's turn
+                        </li>
+                        <li>
+                            The player can choose to 'Hold', which means that their ROUND score gets added to their GLOBAL score. After that, it's the next player's turn.
+                        </li>
+                        <li>
+                            The first player to reach 100/inputed score points on GLOBAL score wins the game
+                        </li>
+                        <li>
+                            Player loses entire score when they roll two 6 in a row.
+                        </li>
+                    </ol>
+                </div>
+                <div class="rules-footer">
+                    <p>Ⓝ Nheljee Garcia.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Game view-->
         <div class="wrapper clearfix">
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
@@ -66,5 +103,6 @@
         </div>
         
         <script src="app.js"></script>
+        <script src="modal.js"></script>
     </body>
 </html>

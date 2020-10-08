@@ -65,6 +65,7 @@ body {
 .main-nav li a:visited { /*somehow, if I add space between a: and visited, it will show an unexpected result*/
     padding: 8px 0;
     text-decoration: none; /*get rid of the line*/
+    color: #511a1a;
     text-transform: uppercase;
     font-size: 100%; /*90% of the base pixels (w/c is 20)*/
     border-bottom: 1px solid transparent; /*the border needs to exist before we actually hover it for this to happen but since we don't want to see it we set it to transparent*/
@@ -270,4 +271,109 @@ i {
 .winner .player-name {
     font-weight: 300;
     color: #EB4D4D;
+}
+
+
+/**********************************************
+*** GAME RULES
+**********************************************/
+
+
+.game-rules {
+    /* Hide the modal view by default*/
+    display: none;
+    position: fixed;
+    /* So that this shows on top of the application/game view*/
+    z-index: 1;
+    padding-top: 200px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enables scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.rules-body {
+    position: relative;
+    background-color: #FCFDF2;
+    margin: 0 auto;
+    padding: 15px 50px;
+    border: 1px solid #888;
+    border-radius: 5%;
+    width: 80%;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #EB4D4D;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #C85454;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.rules-header {
+    padding-bottom: 25px;
+    color: #222;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+}
+
+.rules-list {
+    padding: 2px 16px;
+    font-weight: 300;
+    font-size: 20px;
+    color: #1f1f1f;
+}
+
+.rules-list li {
+    padding: 8px;
+}
+
+.rules-footer {
+    padding-top: 16px;
+    color: #1f1f1f;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
 }
