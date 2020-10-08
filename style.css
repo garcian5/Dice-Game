@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 .clearfix::after {
@@ -56,6 +55,7 @@ body {
     margin-top: 20px;
     margin-right: 20px;
 }
+
 .main-nav li { /*select all the li elements in main-nav*/
     display: inline-block; /*they were block elements and we want them to be inline block so that we can put them side by side*/
     margin-left: 40px; /*each of the blocks will have a margin on the left side of 40px*/
@@ -64,7 +64,6 @@ body {
 .main-nav li a:link,
 .main-nav li a:visited { /*somehow, if I add space between a: and visited, it will show an unexpected result*/
     padding: 8px 0;
-    color: #a06464;
     text-decoration: none; /*get rid of the line*/
     text-transform: uppercase;
     font-size: 100%; /*90% of the base pixels (w/c is 20)*/
@@ -112,8 +111,13 @@ body {
     margin-bottom: 130px;
 }
 
-.active { background-color: #f7f7f7; }
-.active .player-name { font-weight: 300; }
+.active {
+    background-color: #f7f7f7;
+}
+
+.active .player-name {
+    font-weight: 300;
+}
 
 .active .player-name::after {
     content: "\2022";
@@ -122,7 +126,6 @@ body {
     color: #EB4D4D;
     top: -7px;
     right: 10px;
-    
 }
 
 .player-current-box {
@@ -145,6 +148,10 @@ body {
     font-size: 30px;
 }
 
+/**********************************************
+*** BUTTONS
+**********************************************/
+
 button {
     position: absolute;
     width: 200px;
@@ -162,8 +169,13 @@ button {
     transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover { font-weight: 600; }
-button:hover i { margin-right: 20px; }
+button:hover {
+    font-weight: 600;
+}
+
+button:hover i {
+    margin-right: 20px;
+}
 
 button:focus {
     outline: none;
@@ -180,44 +192,58 @@ i {
     transition: margin 0.3s;
 }
 
-input, p{
-    position: absolute;
-    top: 3px;
-    display: inline-block;
-    width: 200px;
-    left: 15%;
+
+/**********************************************
+*** WINNER SCORE BUTTON
+**********************************************/
+
+.wscore {
+    top: 15px;
+    position: absolute;    
+    left: 45%;
     transform: translateX(-50%);
-    color: #a06464;
-    background: none;
-    border: none;
-    font-family: Lato;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 300;
+    text-transform: uppercase;    
 }
 
-.btn-input { 
-    top: 3px;
-    left: 270px;
-    width: 55px;
-    color: #a06464;
+.btn-input {
+    margin-left: 3px;
+    width: 50px;
+    border: none;
+    font-weight: 300;
+    font-family: Lato;
     font-size: 15px;
-    background: rgba(118, 100, 86, 0.12);
+    color: #555;
 }
 
 .btn-enter {
-    bottom: 579px;
-    left: 340px;
-    width: 80px;
-    border: solid 0.3px;
-    border-style: outset;
-    background-color: rgba(145, 98, 98, 0.08);
+    margin-left: 2px;
+    top: 1px;
+    transform: translateX(180%);
+    width: 65px;
+    border-style: none;
     font-size: 15px;
 }
 
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
+
+/**********************************************
+*** OTHER BUTTONS
+**********************************************/
+
+.btn-new {
+    top: 70px;
+}
+
+.btn-roll {
+    top: 403px;
+}
+
+.btn-hold {
+    top: 467px;
+}
+
+/**********************************************
+*** DICE AND BACKGROUNDS
+**********************************************/
 
 .dice {
     position: absolute;
@@ -237,5 +263,11 @@ input, p{
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.winner { background-color: #fff6e3; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner {
+    background-color: #fff6e3;
+}
+
+.winner .player-name {
+    font-weight: 300;
+    color: #EB4D4D;
+}

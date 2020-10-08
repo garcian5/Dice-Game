@@ -38,10 +38,14 @@
                     <div class="player-current-score" id="current-1">0</div>
                 </div>
             </div>
-            
-            <p class="inst">Enter a winning score: </p><input type="number" value="100" id="number" class="btn-input">
-            <button onclick="winningScore()" class="btn-enter"><label id="enter">Enter</label></button>
-            
+             
+            <div class="wscore">                
+                <label class="win-label">Enter a winning score: </label>
+                <input type="number" value="100" id="number" class="btn-input">
+                <button onclick="winningScore()" class="btn-enter" id="enter">Enter</button>
+                
+            </div>
+
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
