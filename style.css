@@ -174,7 +174,7 @@ button:hover {
     font-weight: 600;
 }
 
-button:hover i {
+button:hover ion-icon {
     margin-right: 20px;
 }
 
@@ -182,7 +182,7 @@ button:focus {
     outline: none;
 }
 
-i {
+ion-icon {
     color: #EB4D4D;
     display: inline-block;
     margin-right: 15px;
@@ -214,6 +214,15 @@ i {
     font-family: Lato;
     font-size: 15px;
     color: #555;
+    transition: margin 0.3s;
+}
+
+.btn-input:focus {
+    outline: none;
+}
+
+.btn-input::selection {    
+    background: rgba(0, 0, 0, 0.10);
 }
 
 .btn-enter {
@@ -223,6 +232,11 @@ i {
     width: 65px;
     border-style: none;
     font-size: 15px;
+    transition: margin 0.3s;
+}
+
+.btn-enter:hover {
+    margin-left: 4px;
 }
 
 
